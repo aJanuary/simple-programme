@@ -24,7 +24,9 @@ The programme can be updated after people have loaded it, so long as they have a
 ## Usage
 
 1. [Install Middleman](https://middlemanapp.com/basics/install/)
-2. `middleman init projectname --template=aJanuary/simple-programme`
+2. `mkdir -p ~/.middleman`
+3. `git clone git@github.com:aJanuary/simple-programme.git ~/.middleman/simple-programme`
+2. `middleman init projectname --template=simple-programme`
 3. Edit `data/programme.yaml`
 4. `bundle exec middleman build`
 
