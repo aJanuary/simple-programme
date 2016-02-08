@@ -4,6 +4,8 @@ A project template for [Middleman](http://middlemanapp.com) to generate programm
 
 This template can be used to generate a single page web application for simple conventions and conference programmes that only have one or two parallel streams.
 
+![Screenshot of the application in use](http://ajanuary.github.io/simple-programme/images/screenshot.png)
+
 ## Features
 
 #### Static Web Page
