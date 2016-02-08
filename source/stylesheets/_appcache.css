@@ -1,0 +1,13 @@
+.notif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 3em;
+  background-color: #F95E57;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 2;
+}
