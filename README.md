@@ -81,9 +81,9 @@ days:
 | items       | List of items in the day. | Yes |
 | id          | Identifier for the item.<br>If present, will allow the item to be bookmarked. So long as the id is the same, an item will remember it's bookmark status even if any of the other details change. These should be kept short. | No |
 | name        | Name of the item.<br>On small screens this may be truncated, so put critical information near the beginning. | Yes |
-| start       | Start time of the event in the format `24hh:mm`. | Yes |
+| start       | Start time of the event in the format `24hh:mm`. Must be UTC. | Yes |
 | start_label | Freeform text to display as the start time. If not present, the `start` field will be used instead. | No |
-| end         | End time of the event in the format `24hh:mm`. If it is before the `start` field, it is interpreted as ending on the next day. | Yes |
+| end         | End time of the event in the format `24hh:mm`. Must be UTC. If it is before the `start` field, it is interpreted as ending on the next day. | Yes |
 | end_label   | Freeform text to display as the end time. If not present, the `end` field will be used instead. | No |
 | room        | The room the item will be in. | No |
 
@@ -95,6 +95,7 @@ The `data/config.yaml` file contains configuration.
 
 | Field | Description | Required |
 | clock | What format to display times in. Either '12-hour' or '24-hour'. | Yes |
+| timezone | What timezone to display times in. | Yes |
 
 ## Bookmark Storage
 
