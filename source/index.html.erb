@@ -24,9 +24,9 @@
 	  <article id=<%=item.id%>>
 	    <h2 alt="<%=item.name%>"><%=item.name%></h2>
 	    <p class=time>
-	      <time class=start datetime="<%=day.date%> <%=item.start%>"><%=item.start_label || item.start%></time>
+	      <time class=start datetime="<%=start_date day, item %>"><%=item.start_label || item.start%></time>
 	      &ndash;
-	      <time class=end datetime="<%=day.date%> <%=item.end%>"><%=item.end_label || item.end%></time>
+	      <time class=end datetime="<%=end_date day, item %>"><%=item.end_label || item.end%></time>
 	    </p>
 	    <% if item.room %><p class=room><%=item.room%></p><% end %>
 	    <% if item.id %><a class="bkmk" href="#"></a><% end %>

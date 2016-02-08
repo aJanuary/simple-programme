@@ -81,7 +81,7 @@ days:
 | name        | Name of the item.<br>On small screens this may be truncated, so put critical information near the beginning. | Yes |
 | start       | Start time of the event in the format `24hh:mm`. | Yes |
 | start_label | Freeform text to display as the start time. If not present, the `start` field will be used instead. | No |
-| end         | End time of the event in the format `24hh:mm`. Must be after the `start` field. | Yes |
+| end         | End time of the event in the format `24hh:mm`. If it is before the `start` field, it is interpreted as ending on the next day. | Yes |
 | end_label   | Freeform text to display as the end time. If not present, the `end` field will be used instead. | No |
 | room        | The room the item will be in. | No |
 
