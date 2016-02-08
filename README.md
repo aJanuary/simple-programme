@@ -73,10 +73,14 @@ days:
 | days        | List of the days in the con. | Yes |
 | date        | Date of the day in the format `yyyy-mm-dd`. | Yes |
 | items       | List of items in the day. | Yes |
-| id          | Identifier for the item.<br>If present, will allow the item to be bookmarked. So long as the id is the same, an item will remember it's bookmark status even if any of the other details change. | No |
+| id          | Identifier for the item.<br>If present, will allow the item to be bookmarked. So long as the id is the same, an item will remember it's bookmark status even if any of the other details change. These should be kept short. | No |
 | name        | Name of the item.<br>On small screens this may be truncated, so put critical information near the beginning. | Yes |
 | start       | Start time of the event in the format `24hh:mm`. | Yes |
 | start_label | Freeform text to display as the start time. If not present, the `start` field will be used instead. | No |
 | end         | End time of the event in the format `24hh:mm`. Must be after the `start` field. | Yes |
 | end_label   | Freeform text to display as the end time. If not present, the `end` field will be used instead. | No |
 | room        | The room the item will be in. | No |
+
+## Bookmark Storage
+
+Bookmarks are stored as a cookie on the current domain. They also reflected in the fragment portion of the url. This is because iOS does not share cookies between a website and adding the website to the home screen. The fragment is used to communicate the bookmarks to the home screen version. Because the ids of bookmarked items are stored in the url, the `id` field should be kept short (ideally 2 or three characters) so the length of the URL does not exceed practical limits.
