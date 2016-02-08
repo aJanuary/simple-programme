@@ -14,6 +14,11 @@ helpers do
   require 'date'
   require 'time'
 
+  CLOCK_FORMAT = {
+    '12-hour' => '%I:%M %P',
+    '24-hour' => '%H:%M'
+  }
+
   def day_for(date)
     Date::DAYNAMES[date.wday]
   end
@@ -32,6 +37,12 @@ helpers do
       date += 1
     end
     DateTime.new(date.year, date.month, date.day, end_time.hour, end_time.min).to_s
+  end
+
+  def time_label(time)
+    clock = data['config'] && data['config']['clock']
+    fmt = CLOCK_FORMAT[clock] || CLOCK_FORMAT['24-hour']
+    Time.parse(time).strftime(fmt)
   end
 end
 

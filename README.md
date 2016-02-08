@@ -38,11 +38,13 @@ The programme can be updated after people have loaded it, so long as they have a
 
 The generated files will be in the `build` directory.
 
-## `programme.yaml`
+## Configuration
+
+### `programme.yaml`
 
 The `data/programme.yaml` file contains the data for the programme.
 
-### Example
+#### Example
 
 ```yaml
 name: "Example Con"
@@ -69,7 +71,7 @@ days:
       
 ```
 
-### Fields
+#### Fields
 
 | Field       | Description | Required |
 | ----------- | ----------- | -------- |
@@ -84,6 +86,15 @@ days:
 | end         | End time of the event in the format `24hh:mm`. If it is before the `start` field, it is interpreted as ending on the next day. | Yes |
 | end_label   | Freeform text to display as the end time. If not present, the `end` field will be used instead. | No |
 | room        | The room the item will be in. | No |
+
+### `config.yaml`
+
+The `data/config.yaml` file contains configuration.
+
+#### Fields
+
+| Field | Description | Required |
+| clock | What format to display times in. Either '12-hour' or '24-hour'. | Yes |
 
 ## Bookmark Storage
 
