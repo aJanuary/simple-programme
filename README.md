@@ -94,6 +94,7 @@ The `data/config.yaml` file contains configuration.
 #### Fields
 
 | Field | Description | Required |
+| ----- | ----------- | -------- |
 | clock | What format to display times in. Either '12-hour' or '24-hour'. | Yes |
 | timezone | What timezone to display times in. | Yes |
 
